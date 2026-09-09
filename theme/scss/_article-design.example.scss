@@ -1,0 +1,75 @@
+// --------------------------------------------------------------------
+// Beispiel-Styles für die Artikel-Design-Erweiterung
+//
+// Diese Datei wird NICHT automatisch geladen. Contao kompiliert kein
+// SCSS – kopiere die benötigten Regeln in dein eigenes Theme-SCSS und
+// halte die Klassennamen deckungsgleich mit den Werten, die du im
+// Backend unter "Artikel-Design-Optionen" (tl_ad_option) einträgst.
+// --------------------------------------------------------------------
+
+// Padding-Top
+.pt-sm  { padding-top: 25px; }
+.pt-md  { padding-top: 50px; }
+.pt-lg  { padding-top: 75px; }
+.pt-xl  { padding-top: 100px; }
+.pt-xxl { padding-top: 150px; }
+
+// Padding-Bottom
+.pb-sm  { padding-bottom: 25px; }
+.pb-md  { padding-bottom: 50px; }
+.pb-lg  { padding-bottom: 75px; }
+.pb-xl  { padding-bottom: 100px; }
+.pb-xxl { padding-bottom: 150px; }
+
+// Margin-Top
+.mt-sm  { margin-top: 25px; }
+.mt-md  { margin-top: 50px; }
+.mt-lg  { margin-top: 75px; }
+.mt-xl  { margin-top: 100px; }
+.mt-xxl { margin-top: 150px; }
+
+// Margin-Bottom
+.mb-sm  { margin-bottom: 25px; }
+.mb-md  { margin-bottom: 50px; }
+.mb-lg  { margin-bottom: 75px; }
+.mb-xl  { margin-bottom: 100px; }
+.mb-xxl { margin-bottom: 150px; }
+
+@media (min-width: 992px) {
+    .pt-sm  { padding-top: 50px; }
+    .pt-md  { padding-top: 100px; }
+    .pt-lg  { padding-top: 150px; }
+    .pt-xl  { padding-top: 200px; }
+    .pt-xxl { padding-top: 250px; }
+
+    .pb-sm  { padding-bottom: 50px; }
+    .pb-md  { padding-bottom: 100px; }
+    .pb-lg  { padding-bottom: 150px; }
+    .pb-xl  { padding-bottom: 200px; }
+    .pb-xxl { padding-bottom: 250px; }
+
+    .mt-sm  { margin-top: 50px; }
+    .mt-md  { margin-top: 100px; }
+    .mt-lg  { margin-top: 150px; }
+    .mt-xl  { margin-top: 200px; }
+    .mt-xxl { margin-top: 250px; }
+
+    .mb-sm  { margin-bottom: 50px; }
+    .mb-md  { margin-bottom: 100px; }
+    .mb-lg  { margin-bottom: 150px; }
+    .mb-xl  { margin-bottom: 200px; }
+    .mb-xxl { margin-bottom: 250px; }
+}
+
+// Maximale Breite
+.article-mw-sm  { > .inside { max-width: 585px;  margin-left: auto; margin-right: auto; } }
+.article-mw-md  { > .inside { max-width: 910px;  margin-left: auto; margin-right: auto; } }
+.article-mw-lg  { > .inside { max-width: 1230px; margin-left: auto; margin-right: auto; } }
+.article-mw-xl  { > .inside { max-width: 1390px; margin-left: auto; margin-right: auto; } }
+.article-mw-xxl { > .inside { max-width: 1550px; margin-left: auto; margin-right: auto; } }
+
+// Hintergrundfarben – Klassennamen frei wählbar, hier ein Beispiel-Set
+.article-bg-white    { background-color: #ffffff; }
+.article-bg-grau-100  { background-color: #f5f5f5; }
+.article-bg-grau-200  { background-color: #e5e5e5; }
+.article-bg-primary   { background-color: var(--color-primary, #0055aa); color: #fff; }
