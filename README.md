@@ -15,7 +15,7 @@ Farben ohne Programmieraufwand ergänzt werden können.
 
    ```bash
    composer config repositories.article-design vcs https://github.com/b-fender/contao-article-extended
-   composer require b-fender/contao-article-extended:dev-main
+   composer require b-fender/contao-article-extended:^1.0
    ```
 
 2. Datenbank aktualisieren, damit die neuen Felder und die Tabelle `tl_ad_option`
