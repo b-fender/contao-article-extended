@@ -82,14 +82,3 @@ Vorrang laut Dokumentation nur für Templates im **Projekt-Verzeichnis**
 (`/templates`), nicht zuverlässig für gleichnamige Bundle-Templates. Deshalb
 ist der Weg über das Template Studio aktuell die robusteste, offiziell
 dokumentierte Lösung.
-
-## Änderungshinweis (v1.1.0)
-
-Das Bundle lieferte bis Version 1.0.x ein klassisches PHP-Template
-(`templates/mod_article.html5`) mit, das die Design-Klassen automatisch
-einbindet. Unter Contao 5.7 wird dieses jedoch nicht mehr zuverlässig
-gegenüber der neuen Twig-Vorlage bevorzugt. Ab Version 1.1.0 liefert das
-Bundle stattdessen `templates/mod_article.html.twig` als Kopiervorlage für
-das Template Studio (siehe oben) – wer bereits ein eigenes Artikel-Template
-verwendet, muss dort lediglich die `wrapperAttributes`-Zeile und den
-`.inside`-Wrapper wie im Beispiel ergänzen.
