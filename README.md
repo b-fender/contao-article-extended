@@ -1,6 +1,6 @@
 # Contao Article Design
 
-**Kompatibilität:** Contao 5.0 oder neuer, PHP 8.1+.
+**Kompatibilität:** Contao 5.0 oder neuer, PHP 8.1+. Getestet unter Contao 5.7.
 
 Erweitert `tl_article` um konfigurierbare Design-Eigenschaften – Innen-/Außenabstände,
 maximale Breite, Hintergrundfarbe und einen Schalter für den "inside"-Wrapper.
@@ -34,7 +34,7 @@ Farben ohne Programmieraufwand ergänzt werden können.
 
 ## Verwendung
 
-* **Backend → Design → Artikel-Design-Optionen**: hier neue Werte anlegen,
+* **Backend → Layout → Artikel-Design-Optionen**: hier neue Werte anlegen,
   deaktivieren oder umsortieren (Feld "Sortierung", je kleiner die Zahl, desto
   weiter oben in der Auswahlliste). Jeder Eintrag besteht aus:
   * **Eigenschaft** – für welches Artikelfeld der Eintrag gilt (pt/pb/mt/mb/mw/bgcolor)
@@ -47,3 +47,49 @@ Farben ohne Programmieraufwand ergänzt werden können.
   alle mitgelieferten Standardwerte. Contao kompiliert kein SCSS – die Regeln
   bei Bedarf in das eigene Theme-SCSS übernehmen und mit den in
   `tl_ad_option` gepflegten Klassennamen synchron halten.
+
+## Template-Anpassung (Twig, Contao ≥ 5.7) — WICHTIG
+
+Damit die neuen Felder (`pt`, `pb`, `mt`, `mb`, `mw`, `bgcolor`, `ad_noinside`)
+auch tatsächlich als CSS-Klassen im HTML landen, muss der Artikel-Wrapper
+angepasst werden. Seit Contao 5.7 ist **Twig der Standard-Renderer** für
+`mod_article` – ein von einem Bundle mitgeliefertes `.html5`- oder
+`.html.twig`-Template überschreibt die Core-Twig-Vorlage dabei **nicht
+zuverlässig automatisch**. Der von Contao offiziell unterstützte und
+getestete Weg ist ein **Projekt-Override über das Template Studio**:
+
+1. Backend → Layout → **Template Studio** → nach `mod_article` suchen und
+   öffnen.
+2. Oben rechts auf **„Ihr Template erstellen"** klicken. Das legt automatisch
+   `templates/mod_article.html.twig` im Contao-Projekt an, die Vorrang vor
+   der Core-Vorlage `@Contao/mod_article.html.twig` hat.
+3. Den vorbelegten Inhalt löschen und durch den Inhalt von
+   [`templates/mod_article.html.twig`](templates/mod_article.html.twig) aus
+   diesem Repository ersetzen.
+4. Speichern – die Änderung greift sofort, ohne Cache-Clear oder Migration.
+
+Die mitgelieferte Datei `templates/mod_article.html.twig` in diesem Repo ist
+also **kein automatisch aktives Template**, sondern die Vorlage zum Kopieren
+in Schritt 3.
+
+### Warum nicht automatisch über das Bundle?
+
+Contao 5.7 rendert `mod_article` per Default über die Core-Twig-Vorlage. Die
+Wrapper-Klassen werden dort **außerhalb** eines benannten `{% block %}`
+gesetzt, sodass sich ein klassischer `{% extends %}`-Block-Override nicht
+eignet – die komplette Datei muss ersetzt werden. Contao garantiert diesen
+Vorrang laut Dokumentation nur für Templates im **Projekt-Verzeichnis**
+(`/templates`), nicht zuverlässig für gleichnamige Bundle-Templates. Deshalb
+ist der Weg über das Template Studio aktuell die robusteste, offiziell
+dokumentierte Lösung.
+
+## Änderungshinweis (v1.1.0)
+
+Das Bundle lieferte bis Version 1.0.x ein klassisches PHP-Template
+(`templates/mod_article.html5`) mit, das die Design-Klassen automatisch
+einbindet. Unter Contao 5.7 wird dieses jedoch nicht mehr zuverlässig
+gegenüber der neuen Twig-Vorlage bevorzugt. Ab Version 1.1.0 liefert das
+Bundle stattdessen `templates/mod_article.html.twig` als Kopiervorlage für
+das Template Studio (siehe oben) – wer bereits ein eigenes Artikel-Template
+verwendet, muss dort lediglich die `wrapperAttributes`-Zeile und den
+`.inside`-Wrapper wie im Beispiel ergänzen.
