@@ -14,8 +14,8 @@ Farben ohne Programmieraufwand ergänzt werden können.
    Composer einbinden:
 
    ```bash
-   composer config repositories.article-design vcs https://github.com/b-fender/contao-article-extended
-   composer require b-fender/contao-article-extended:^1.0
+   composer config repositories.article-design vcs https://github.com/pedro-go/contao-article-extended
+   composer require pedro-go/contao-article-extended:^1.0
    ```
 
 2. Datenbank aktualisieren, damit die neuen Felder und die Tabelle `tl_ad_option`

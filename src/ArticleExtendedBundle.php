@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BFender\ArticleExtendedBundle;
+namespace PedroGo\ArticleExtendedBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

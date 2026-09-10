@@ -1,11 +1,11 @@
 {
-    "name": "b-fender/contao-article-extended",
+    "name": "pedro-go/contao-article-extended",
     "type": "contao-bundle",
     "description": "Erweitert Contao-Artikel um konfigurierbare Design-Eigenschaften (Abstände, max. Breite, Hintergrundfarbe), deren Auswahllisten im Backend gepflegt werden.",
     "license": "MIT",
     "authors": [
         {
-            "name": "b-fender"
+            "name": "pedro-go"
         }
     ],
     "require": {
@@ -20,10 +20,10 @@
     },
     "autoload": {
         "psr-4": {
-            "BFender\\ArticleExtendedBundle\\": "src/"
+            "PedroGo\\ArticleExtendedBundle\\": "src/"
         }
     },
     "extra": {
-        "contao-manager-plugin": "BFender\\ArticleExtendedBundle\\ContaoManager\\Plugin"
+        "contao-manager-plugin": "PedroGo\\ArticleExtendedBundle\\ContaoManager\\Plugin"
     }
 }

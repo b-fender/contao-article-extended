@@ -1,6 +1,6 @@
 <?php
 
-use BFender\ArticleExtendedBundle\Dca\ArticleOptions;
+use PedroGo\ArticleExtendedBundle\Dca\ArticleOptions;
 
 // --------------------------------------------------------------------
 // Neue Legende + Felder in die Standard-Palette einhängen

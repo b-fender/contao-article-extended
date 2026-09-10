@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BFender\ArticleExtendedBundle\DependencyInjection;
+namespace PedroGo\ArticleExtendedBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

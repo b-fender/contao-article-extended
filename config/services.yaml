@@ -4,5 +4,5 @@ services:
         autoconfigure: true
         public: false
 
-    BFender\ArticleExtendedBundle\Migration\:
+    PedroGo\ArticleExtendedBundle\Migration\:
         resource: '../src/Migration'

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BFender\ArticleExtendedBundle\Migration;
+namespace PedroGo\ArticleExtendedBundle\Migration;
 
 use Contao\CoreBundle\Migration\AbstractMigration;
 use Contao\CoreBundle\Migration\MigrationResult;

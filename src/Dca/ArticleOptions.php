@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BFender\ArticleExtendedBundle\Dca;
+namespace PedroGo\ArticleExtendedBundle\Dca;
 
 use Contao\Database;
 use Contao\DataContainer;
