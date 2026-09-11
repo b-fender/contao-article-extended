@@ -2,12 +2,18 @@
     "name": "pedro-go/contao-article-extended",
     "type": "contao-bundle",
     "description": "Erweitert Contao-Artikel um konfigurierbare Design-Eigenschaften (Abstände, max. Breite, Hintergrundfarbe), deren Auswahllisten im Backend gepflegt werden.",
+    "keywords": ["contao", "contao-bundle", "article", "design", "spacing", "layout"],
+    "homepage": "https://github.com/pedro-go/contao-article-extended",
     "license": "MIT",
     "authors": [
         {
             "name": "pedro-go"
         }
     ],
+    "support": {
+        "issues": "https://github.com/pedro-go/contao-article-extended/issues",
+        "source": "https://github.com/pedro-go/contao-article-extended"
+    },
     "require": {
         "php": "^8.1",
         "contao/core-bundle": "^5.0"

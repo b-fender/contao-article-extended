@@ -1,5 +1,8 @@
 # Contao Article Design
 
+[![CI](https://github.com/pedro-go/contao-article-extended/actions/workflows/ci.yml/badge.svg)](https://github.com/pedro-go/contao-article-extended/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 **Kompatibilität:** Contao 5.0 oder neuer, PHP 8.1+. Getestet unter Contao 5.7.
 
 Erweitert `tl_article` um konfigurierbare Design-Eigenschaften – Innen-/Außenabstände,
