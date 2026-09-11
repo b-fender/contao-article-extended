@@ -21,6 +21,13 @@
     "require-dev": {
         "contao/manager-plugin": "^2.3.1"
     },
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": true,
+            "contao/manager-plugin": true,
+            "php-http/discovery": true
+        }
+    },
     "conflict": {
         "contao/manager-plugin": "<2.0 || >=3.0"
     },
